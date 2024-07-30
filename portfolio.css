@@ -33,7 +33,7 @@ body {
 
 #headerBackground {
     object-fit: cover;
-    background-image: url(images/headerimggg.jpg);
+    background-image: url(headerimg.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: bottom center;
