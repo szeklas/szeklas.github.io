@@ -39,6 +39,7 @@ body {
 }
 
 
+
 #szoveg {
     color: white;
     position: absolute;
@@ -106,14 +107,11 @@ nav{
 
 #rolam {
     background-color: black;
-    height: 100vh;
 }
 
 
 #sectionBox {
     display: flex;
-    flex-direction: column;
-    width: 100%;
     align-items: center;
     margin-top: 100px;
 }
