@@ -1,0 +1,501 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body{
+    background: #ECE9E6;
+    background: -webkit-linear-gradient(to right, #FFFFFF, #ECE9E6);
+    background: linear-gradient(to right, #FFFFFF, #ECE9E6);
+
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+.greyText{
+    color: grey;
+}
+
+/*NAVBAR*/
+
+.navbar{
+    background-image: linear-gradient(to right,black,grey);
+    filter: drop-shadow(2px 3px 6px black);
+}
+
+
+.navbar-nav{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+
+.navbar-toggler{
+    background-color: white;
+}
+
+
+.nav-link{
+    color: white;
+}
+
+
+.nav-link:hover{
+    color: grey;
+}
+
+/*HEADER*/
+
+
+
+#koszonto{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.koszontoSzoveg{
+    position: relative;
+}
+
+
+.koszontoSzoveg:hover{
+    cursor: default;
+}
+
+
+#socialBox{
+    font-size: 2rem;
+    display: flex;
+    gap: 1.7rem;
+}
+
+
+.koszontoSzoveg::after{
+    position: absolute;
+    content: '';
+    width: 30%;
+    height: 2px;
+    bottom: 0px;
+    left: 0px;
+    border-radius: 30px;
+    background-image: linear-gradient(to right,black,grey);
+    transition: 1s;
+}
+
+.koszontoSzoveg:hover::after{
+    width: 100%;
+    filter: drop-shadow(2px 3px 6px black);
+}
+
+.felkiatojel{
+    color: grey;
+    animation-name: VillogoAnimacio;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+/*ANIMÁCIÓK*/
+
+@keyframes VillogoAnimacio{
+    0%{
+        opacity: 1;
+    }
+    50%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+@keyframes VillogoAnimacioV2{
+    0%{
+        text-shadow: 2px 2px 5px grey;
+        font-weight: normal;
+    }
+    10%{
+        font-weight: bolder;
+    }
+    30%{
+        font-weight: normal;
+    }
+    50%{
+        text-shadow: none;
+        font-weight: bolder;
+    }
+    70%{
+        font-weight: bolder;
+    }
+    90%{
+        font-weight: bolder;
+    }
+    100%{
+        text-shadow: 2px 2px 6px grey;
+        font-weight: normal;
+    }
+}
+
+
+/*ABOUT*/
+
+#about{
+    height: 100vh;
+}
+
+
+#aboutKepBox{
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   height: 100%;
+}
+
+#aboutKepBox img{
+    height: 350px;
+    width: 350px;
+    object-fit: cover;
+    filter: drop-shadow(6px 4px 6px grey);
+    border: 1px solid black;
+}
+
+
+.aboutBox h2{
+    font-size: 6vw;
+}
+
+.frontend{
+    animation-name: VillogoAnimacioV2;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+
+.subTitle{
+    font-size: 4rem;
+    font-variant: small-caps;
+    position: relative;
+}
+
+.subTitle::after{
+    position: absolute;
+    content: '';
+    width: 100px;
+    height: 2px;
+    bottom: 0px;
+    left: 0px;
+    border-radius: 30px;
+    background-image: linear-gradient(to right,black,grey);
+}
+
+
+/*SKILLS*/
+
+#skills{
+    min-height: 100vh;
+    margin-bottom: 50px;
+}
+
+#skillsContainer{
+    min-height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+#skillsContainerBox h2,p{
+    font-weight: bolder;
+}
+
+.border{
+    display: flex;
+    flex-direction: column;
+    border: 1px solid grey;
+    border-radius: 20px;
+    box-shadow: 7px 3px 20px black;
+    padding: 20px;
+}
+
+#skillsBoxFrontend{
+    display: flex;
+    flex-direction: column;
+    border: 1px solid grey;
+    border-radius: 20px;
+    box-shadow: 7px 3px 20px black;
+    padding: 20px;
+}
+
+#cssBox p{
+    margin-right: 10px;
+}
+
+
+#skillsBoxBackend{
+    display: flex;
+    flex-direction: column;
+    border: 1px solid grey;
+    border-radius: 20px;
+    box-shadow: -7px 2px 20px black;
+    padding: 20px;
+}
+
+i{
+    font-size: 2rem;
+}
+
+.skillsBox{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.skillsBox p{
+    margin-left: 15px;
+}
+
+#skills .animate{
+    transition: 0.5s;
+}
+
+#skills{
+    overflow-x: hidden;
+}
+
+#skills .frontendBoxAnimate{
+    filter: blur(10px);
+    transform: translateX(-120%);
+}
+
+#skills.show-animate .frontendBoxAnimate{
+    transform: translateX(0);
+    filter: blur(0);
+}
+
+#skills .backendBoxAnimate{
+    filter: blur(10px);
+    transform: translateX(120%);
+}
+
+#skills.show-animate .backendBoxAnimate{
+    filter: blur(0);
+    transform: translateX(0);
+}
+
+
+/*PROJEKTEK*/
+
+#projektek{
+    height: max-content;
+}
+
+#projektek h2{
+    letter-spacing: 10px;
+    font-size: 2rem;
+    color: black;
+    filter: drop-shadow(2px 3px 4px black);
+    filter: blur(0.5px);
+    font-weight: bold;
+}
+
+#kisebbProjektek button{
+    background-image: linear-gradient(to right,rgb(30, 30, 30),rgb(113, 113, 113),rgb(30, 30, 30));
+    color: white;
+}
+
+.projektIconBox{
+    display: flex;
+    align-items: center;
+}
+
+.projektIconBox i{
+    margin: 0px 10px 0px 10px;
+}
+
+#nagyobbProjektek .nagyobbProjektekBox{
+    background-image: linear-gradient(to left,black,grey);
+    color: white;
+}
+
+#nagyobbProjektek button{
+    background-image: linear-gradient(to right,rgb(255, 255, 255),rgb(160, 160, 160),rgb(255, 255, 255));
+}
+
+#projektek .kisebbProjektekBox.projektAnimate1{
+    opacity: 0;
+    filter: blur(10px);
+    transition: 0.5s;
+}
+
+#projektek.show-animate .kisebbProjektekBox.projektAnimate1{
+    opacity: 1;
+    filter: blur(0);
+}
+
+#projektek .kisebbProjektekBox.projektAnimate2{
+    opacity: 0;
+    filter: blur(10px);
+    transition: 1s;
+}
+
+#projektek.show-animate .kisebbProjektekBox.projektAnimate2{
+    opacity: 1;
+    filter: blur(0);
+}
+
+#projektek .kisebbProjektekBox.projektAnimate3{
+    opacity: 0;
+    filter: blur(10px);
+    transition: 1.5s;
+}
+
+#projektek.show-animate .kisebbProjektekBox.projektAnimate3{
+    opacity: 1;
+    filter: blur(0);
+}
+
+#projektek .nagyobbProjektekBox.projektAnimate4{
+    opacity: 0;
+    filter: blur(10px);
+    transition: 2s;
+}
+
+#projektek.show-animate .nagyobbProjektekBox.projektAnimate4{
+    opacity: 1;
+    filter: blur(0);
+}
+
+#projektek .nagyobbProjektekBox.projektAnimate5{
+    opacity: 0;
+    filter: blur(10px);
+    transition: 2.2s;
+}
+
+#projektek.show-animate .nagyobbProjektekBox.projektAnimate5{
+    opacity: 1;
+    filter: blur(0);
+}
+
+
+/*CONTACTS*/
+
+#contact{
+    height: 100vh;
+    margin-top: 200px;
+}
+
+#contactContainer{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow-x: hidden;
+}
+
+#contactContainer h1{
+    font-size: 5vw;
+}
+
+
+#phoneBox{
+    margin-top: 20px;
+    display: flex;
+}
+
+#phoneBox p{
+    margin-left: 10px;
+    font-size: 4vw;
+}
+
+#phoneBox i{
+    font-size: 5vw;
+}
+
+#emailBox{
+    margin-top: 20px;
+    display: flex;
+}
+
+#emailBox p{
+    margin-left: 10px;
+    font-size: 4vw;
+}
+
+#emailBox i{
+    font-size: 5vw;
+}
+
+.fontWeight{
+    font-weight: bold;
+}
+
+
+#contactContainer .contactAnimate{
+    transform: scale(0.3);
+    filter: blur(10px);
+    transition: 1s;
+}
+
+#contact.show-animate .contactAnimate{
+    transform: scale(1);
+    filter: blur(0);
+}
+
+#contact .animate{
+    transform: translateX(200%);
+    filter: drop-shadow(2px 3px 6px black);
+    filter: blur(10px);
+    transition: 1s;
+}
+
+#contact.show-animate .animate{
+    transform: translateX(0);
+    filter: drop-shadow(none);
+    filter: blur(0);
+}
+
+
+/*FOOTER*/
+
+footer{
+    background-image: linear-gradient(to left,black,grey);
+    filter: drop-shadow(2px 3px 6px black);
+    color: white;
+    min-height: 30vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+footer a{
+    color: white;
+    margin-right: 15px;
+    font-weight: normal;
+    transition: 0.1s;
+}
+
+footer a:hover{
+    color: grey;
+}
+
+.footerNavBox{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.footerCopyrightBox{
+    display: flex;
+}
